@@ -12,7 +12,7 @@ app.use(function(req, res, next){
         numberOfRequestsForUser = numberOfRequestsForUser + 1;
         if(numberOfRequestsForUser(userId) > 5){
             res.status(404).json({
-                "msg" : "too many requests"
+                "msg" : "too many requests per second"
             })
         }else{
             next();
